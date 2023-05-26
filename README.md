@@ -1,4 +1,4 @@
-# kenne
+# Spring v 6.1.0 
 Full spring api for e-commerce site
 with the following endpoints
 
