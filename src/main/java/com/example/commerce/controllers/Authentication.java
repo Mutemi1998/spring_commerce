@@ -21,7 +21,6 @@ public class Authentication {
     @Autowired
     private UserService userService;
 
-
     //register user
     @PostMapping("/{register}")
     public ResponseEntity<?> createUser(@Valid @RequestBody UserRequest userRequest, BindingResult result) {

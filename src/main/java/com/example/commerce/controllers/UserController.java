@@ -32,8 +32,6 @@ public class UserController {
     @Autowired
     private UserService userService;
     private final BCryptPasswordEncoder passwordEncoder;
-
-
     public UserController(BCryptPasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
     }

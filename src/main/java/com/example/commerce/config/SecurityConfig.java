@@ -2,6 +2,7 @@ package com.example.commerce.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -26,7 +27,7 @@ public class SecurityConfig {
 				.loginPage("/api/login")
 				.permitAll()
 			)
-			.logout((logout) -> logout.permitAll());
+			.logout(LogoutConfigurer::permitAll);
 
 		return http.build();
 	}
