@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -19,14 +20,14 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http
 			.authorizeHttpRequests((requests) -> requests
-				.requestMatchers("/User/**","/api/register").permitAll()
+				.requestMatchers("/User/**","/api/register","/api/products/**").permitAll()
 				.anyRequest().authenticated()
 			)
 			.formLogin((form) -> form
 				.loginPage("/api/login")
 				.permitAll()
 			)
-			.logout((logout) -> logout.permitAll());
+			.logout(LogoutConfigurer::permitAll);
 
 		return http.build();
 	}

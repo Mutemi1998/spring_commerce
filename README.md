@@ -46,3 +46,7 @@ with the following endpoints
     Reviews and Ratings Endpoints:
         /api/products/{id}/reviews: Retrieve reviews for a specific product.
         /api/products/{id}/reviews/create: Create a new review for a product.
+
+    Category endpoints
+        /api/Category/{id}
+        /api/Category/
