@@ -20,6 +20,7 @@ with the following endpoints
         /api/cart/update: Update the quantity of a product in the shopping cart.
         /api/cart/remove: Remove a product from the shopping cart.
         /api/cart/clear: Clear the entire shopping cart.
+        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
 
     Checkout and Order Management Endpoints:
         /api/checkout: Initiate the checkout process.
